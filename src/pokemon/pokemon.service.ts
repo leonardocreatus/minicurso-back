@@ -43,7 +43,8 @@ export class PokemonService {
               }
             }
           })
-          .catch(() => {
+          .catch((e) => {
+            console.log('pokemon error', e);
             console.log('pokemon');
           });
 
@@ -59,7 +60,8 @@ export class PokemonService {
               }
             }
           })
-          .catch(() => {
+          .catch((e) => {
+            console.log('pokebola error', e);
             console.log('pokebola');
           });
 
@@ -75,7 +77,8 @@ export class PokemonService {
               }
             }
           })
-          .catch(() => {
+          .catch((e) => {
+            console.log('nature error', e);
             console.log('nature');
           });
 
@@ -91,7 +94,8 @@ export class PokemonService {
               }
             }
           })
-          .catch(() => {
+          .catch((e) => {
+            console.log('ability error', e);
             console.log('ability');
           });
 
@@ -107,13 +111,14 @@ export class PokemonService {
               }
             }
           })
-          .catch(() => {
+          .catch((e) => {
+            console.log('owner error', e);
             console.log('owner');
           });
 
         setTimeout(() => {
           resolve(obj);
-        }, 10000);
+        }, 15000);
       });
 
       return {
