@@ -1,0 +1,49 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/pokemon": {
+      "get": {
+        "operationId": "PokemonController_handle",
+        "summary": "Buscar informações de um pokemon",
+        "parameters": [
+          {
+            "name": "address",
+            "required": true,
+            "in": "query",
+            "description": "Endereço do pokemon",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Informações obtidas com sucesso"
+          },
+          "400": {
+            "description": "Contrato não existente"
+          }
+        },
+        "tags": [
+          "Pokemons"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "API de busca de Pokemons no Blockchain",
+    "description": "Esta documentação detalha as rotas e os modelos de dados da API.",
+    "version": "1.0.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [
+    {
+      "url": "https://api.pokemon.creatusdev.com",
+      "description": "Produção"
+    }
+  ],
+  "components": {
+    "schemas": {}
+  }
+}
