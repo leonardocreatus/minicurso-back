@@ -118,7 +118,7 @@ export class PokemonService {
 
         setTimeout(() => {
           resolve(obj);
-        }, 15000);
+        }, 10000);
       });
 
       return {
