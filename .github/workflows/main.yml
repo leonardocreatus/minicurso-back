@@ -14,17 +14,17 @@ jobs:
       - name: Upload file via SSH
         uses: appleboy/scp-action@master
         with:
-          host: apps.creatusdev.com
+          host: 181.215.4.27
           username: root
-          password: ${{secrets.PASSWORD}}
+          password: ${{secrets.PROD_PASSWORD}}
           source: './*'
           target: '/root/apps/minicurso/tmp/minicurso-back'
       - name: Remote commands
         uses: appleboy/ssh-action@v0.1.6
         with:
-          host: apps.creatusdev.com
+          host: 181.215.4.27
           username: root
-          password: ${{secrets.PASSWORD}}
+          password: ${{secrets.PROD_PASSWORD}}
           port: 22
           script: |
             cd /root/apps/minicurso/minicurso-back
